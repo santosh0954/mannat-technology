@@ -1,0 +1,234 @@
+/* Base font setup */
+:root {
+  --font-body: "Inter", sans-serif;
+  --font-heading: "Poppins", serif;
+  --font-size-base: 16px;
+  --font-size-lg: 1.25rem;
+  --font-size-md: 1rem;
+  --font-size-sm: 0.875rem;
+  --font-size-xs: 0.75rem;
+  --text: #090c0e;
+  --background: #f9fafb;
+  --primary: #1d62ad;
+  --primary-dark: #000030;
+  --secondary: #c3e0ff;
+  --accent: #d1700f;
+}
+
+/* Responsive font sizes */
+body {
+  font-family: var(--font-body);
+  font-size: var(--font-size-base);
+  background-color: var(--background);
+  color: var(--text);
+}
+.btn-accent {
+  background-color: var(--accent);
+  color: white;
+}
+.btn-accent:hover {
+  background-color: #aa4e02;
+  color: white;
+}
+.bg-theme-secondary {
+  background-color: var(--secondary) !important;
+}
+.bg-primary-dark {
+  background-color: var(--primary-dark) !important;
+}
+.owl-stage {
+  display: flex;
+}
+
+h1,
+.h1 {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+h2,
+.h2 {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+h3,
+.h3 {
+  font-family: var(--font-heading);
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+h4,
+.h4 {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+h5,
+.h5 {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+h6,
+.h6 {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 700;
+}
+.ff-body {
+  font-family: var(--font-body);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  :root {
+    --font-size-base: 15px;
+  }
+}
+
+@media (max-width: 992px) {
+  :root {
+    --font-size-base: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --font-size-base: 13px;
+  }
+}
+
+@media (max-width: 576px) {
+  :root {
+    --font-size-base: 12px;
+  }
+}
+.snap {
+  scroll-snap-type: y mandatory;
+}
+.snap > * {
+  scroll-snap-align: start;
+}
+
+@keyframes grow {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.2);
+  }
+}
+@keyframes loop {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-40%);
+  }
+}
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(3em);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+#hero-slider {
+  background: black;
+  position: relative;
+}
+#hero-slider .carousel-item::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+#hero-slider .carousel-caption,
+#hero-slider .carousel-indicator {
+  z-index: 2;
+}
+#hero-slider .carousel-caption {
+  top: 50%;
+  transform: translateY(-50%);
+  bottom: unset;
+}
+#hero-slider .carousel-indicators button {
+  width: 10px;
+  height: 10px;
+  opacity: 0.5;
+}
+#hero-slider .carousel-caption h5 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: white;
+  opacity: 0;
+  animation: slideUp 1s ease forwards;
+}
+#hero-slider .carousel-caption p {
+  font-size: 1.5rem;
+  color: white;
+  opacity: 0;
+  animation: slideUp 1s ease 0.5s forwards;
+}
+#hero-slider img {
+  height: 100vh;
+  object-fit: cover;
+  animation: grow 15s linear both infinite;
+}
+.marquee {
+  overflow: hidden;
+  position: relative;
+  color: white;
+}
+.marquee ul {
+  display: flex;
+  width: fit-content;
+  animation: loop 10s linear infinite;
+}
+footer {
+  background-color: #f8f9fa;
+  padding: 20px 0;
+}
+
+.social-icons a {
+  margin: 0 10px;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.footer-links a {
+  color: rgba(255, 255, 255, 0.822);
+  text-decoration: none;
+  margin: 0 15px;
+  transition: all 0.3s;
+}
+
+.footer-links a:hover {
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .footer-links {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .social-icons {
+    text-align: center;
+  }
+}
