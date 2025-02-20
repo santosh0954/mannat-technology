@@ -80,7 +80,7 @@
       </div>
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="images/slider1.webp" class="d-block w-100" alt="...">
+          <img src="images/img1.webp" class="d-block w-100" alt="...">
           <div class="carousel-caption d-none d-md-block">
             <h5 class="display-6">Welcome To Mannat Technology</h5>
             <p>Transform Your Business with Cutting-Edge Technology</p>
@@ -91,14 +91,14 @@
           </div>
         </div>
         <div class="carousel-item">
-          <img src="images/slider2.webp" class="d-block w-100" alt="...">
+          <img src="images/img2.webp" class="d-block w-100" alt="...">
           <div class="carousel-caption d-none d-md-block">
             <h5>Digital Growth Starts Here</h5>
             <p>From custom software to SEO and social media marketing—we help you scale!</p>
           </div>
         </div>
         <div class="carousel-item">
-          <img src="images/slider1.webp" class="d-block w-100" alt="...">
+          <img src="images/img3.webp" class="d-block w-100" alt="...">
           <div class="carousel-caption d-none d-md-block">
             <h5>Innovation That Drives Success</h5>
             <p>Smart, scalable, and result-driven tech solutions for your business growth.</p>
@@ -356,16 +356,28 @@
   <div class="modal fade" id="enquiryForm" tabindex="-1" aria-labelledby="enquiryFormLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="enquiryFormLabel">Modal title</h1>
+        <div class="modal-header bg-primary text-white">
+          <h1 class="modal-title fs-5" id="enquiryFormLabel">Enquiry Now</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <div class="modal-body">
-          ...
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
+        <div class="modal-body px-4">
+          <form>
+            <div class="mb-3">
+              <label for="name" class="form-label">Name</label>
+              <input type="text" class="form-control" id="name" placeholder="Enter Your Name">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                placeholder="Enter Your Email">
+              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Message</label>
+              <textarea name="message" id="message" rows="5" class="form-control" placeholder="Message here..."></textarea>
+            </div>
+            <button type="submit" class="btn shadow-sm btn-accent px-4 rounded-pill">Send <i class="bi bi-send"></i></button>
+            </form>
         </div>
       </div>
     </div>
