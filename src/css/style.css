@@ -161,6 +161,9 @@ h6,
   }
 
 }
+.navbar-toggler {
+  box-shadow: none !important;
+}
 
 #hero-slider {
   background: black;
