@@ -9,7 +9,10 @@
   <meta name="keywords" content="Software Development, IT Services, Technology Solutions, Prayagraj, Uttar Pradesh">
   <meta name="author" content="Mannat Technology">
   <title>Mannat Technology</title>
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
   <meta property="og:title" content="Mannat Technology">
   <meta property="og:description" content="Leading Software Development Company based in Prayagraj, Uttar Pradesh">
   <meta property="og:image" content="og-image.jpg">
@@ -45,11 +48,12 @@
         <a class="navbar-brand" href="#">
           <img src="images/logo-white.png" alt="Mannat Technology" width="170" class="d-inline-block align-top">
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler px-2 rounded-1" type="button">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
+        <div class="navbar-mobile" id="navbarNav">
+          <button class=" btn-close float-end btn-close-white top-0 end-0 m-3 position-absolute d-lg-none" id="close-menu">
+          </button>
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
               <a class="nav-link" href="#">Home</a>
@@ -80,7 +84,8 @@
       </div>
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="images/img1.webp" class="d-block w-100" alt="...">
+          <img src="images/img1.webp" class="d-none d-md-block w-100" alt="...">
+          <img src="images/img1_mobile.webp" class="d-block d-md-none w-100" alt="...">
           <div class="carousel-caption d-none d-md-block">
             <h5 class="display-6">Welcome To Mannat Technology</h5>
             <p>Transform Your Business with Cutting-Edge Technology</p>
@@ -123,7 +128,7 @@
             <img src="images/about.jpg" alt="About Us" class="img-fluid">
           </div>
           <div class="col-md-6">
-            <h1 class="h2">About Us</h1>
+            <h1 class="h3">About Us</h1>
             <p class="text-a-justify text-muted">
               Mannat Technology is a dynamic software development and digital solutions company dedicated to helping
               businesses
@@ -153,11 +158,11 @@
       <div class="container py-4 text-center">
         <div class="mb-5">
           <h3 class="h5 text-primary ff-body text-uppercase">Our Services</h3>
-          <h2 class="">Technology for a Better World</h2>
+          <h2 class="h3">Technology for a Better World</h2>
         </div>
         <div class="row">
           <div class="col-md-4 mb-3">
-            <div class="card shadow-sm border-0">
+            <div class="card shadow-c border-0">
               <img src="images/web.png" alt="Service 1" class="mx-auto d-block pt-4 mb-2" width="75px">
               <div class="card-body">
                 <h5 class="card-title">Web Solutions</h5>
@@ -170,7 +175,7 @@
             </div>
           </div>
           <div class="col-md-4 mb-3">
-            <div class="card shadow-sm border-0">
+            <div class="card shadow-c border-0">
               <img src="images/development.png" alt="Service 1" class="mx-auto d-block pt-4 mb-2" width="75px">
               <div class="card-body">
                 <h5 class="card-title">App Development</h5>
@@ -183,7 +188,7 @@
             </div>
           </div>
           <div class="col-md-4 mb-3">
-            <div class="card shadow-sm border-0">
+            <div class="card shadow-c border-0">
               <img src="images/social-media.png" alt="Service 1" class="mx-auto d-block pt-4 mb-2" width="75px">
               <div class="card-body">
                 <h5 class="card-title">Digital Marketing</h5>
@@ -205,7 +210,7 @@
       <div class="container py-4 text-center">
         <div class="mb-5">
           <h3 class="h5 text-primary ff-body text-uppercase">Our Clients</h3>
-          <h2 class="">Working with the best</h2>
+          <h2 class="h3">Working with the best</h2>
         </div>
         <div class="marquee">
           <ul class="d-flex list-unstyled">
@@ -262,11 +267,11 @@
           <div class="testimonial-slider owl-carousel owl-theme testimonial-slider">
             <div class="card border-0 shadow-sm my-3 border-top border-5 border-primary h-100">
               <div class="card-body">
-                <blockquote class="blockquote fs-6">
-                  <p>"Mannat Technology transformed our business operations with their custom ERP solution. Our workflow
+                <blockquote class="blockquote mb-0 fs-6">
+                  <p class="mb-0">"Mannat Technology transformed our business operations with their custom ERP solution. Our workflow
                     is now more
                     efficient, and productivity has increased significantly!"</p>
-                  <footer class="blockquote-footer float-end mt-3">
+                  <footer class="blockquote-footer bg-transparent float-end">
                     <cite title="Amit Sharma">Amit Sharma </cite>
                   </footer>
                 </blockquote>
@@ -274,11 +279,11 @@
             </div>
             <div class="card border-0 shadow-sm my-3 border-top border-5 border-primary h-100">
               <div class="card-body">
-                <blockquote class="blockquote fs-6">
-                  <p>"Their team developed a stunning website and mobile app for our brand. The user experience is
+                <blockquote class="blockquote mb-0 fs-6">
+                  <p class="mb-0">"Their team developed a stunning website and mobile app for our brand. The user experience is
                     fantastic, and we've seen
                     a major boost in customer engagement!"</p>
-                  <footer class="blockquote-footer float-end mt-3">
+                  <footer class="blockquote-footer bg-transparent float-end">
                     <cite title="Priya Verma">Priya Verma </cite>
                   </footer>
                 </blockquote>
@@ -286,11 +291,11 @@
             </div>
             <div class="card border-0 shadow-sm my-3 border-top border-5 border-primary h-100">
               <div class="card-body">
-                <blockquote class="blockquote fs-6">
-                  <p>"Mannat Technology's digital marketing strategies helped us rank on the first page of Google! Our
+                <blockquote class="blockquote mb-0 fs-6">
+                  <p class="mb-0">"Mannat Technology's digital marketing strategies helped us rank on the first page of Google! Our
                     traffic and leads have
                     doubled in just a few months."</p>
-                  <footer class="blockquote-footer float-end mt-3">
+                  <footer class="blockquote-footer bg-transparent float-end">
                     <cite title="Rahul Mehta">Rahul Mehta </cite>
                   </footer>
                 </blockquote>
@@ -298,11 +303,11 @@
             </div>
             <div class="card border-0 shadow-sm my-3 border-top border-5 border-primary h-100">
               <div class="card-body">
-                <blockquote class="blockquote fs-6">
-                  <p>"Mannat Technology's digital marketing strategies helped us rank on the first page of Google! Our
+                <blockquote class="blockquote mb-0 fs-6">
+                  <p class="mb-0">"Mannat Technology's digital marketing strategies helped us rank on the first page of Google! Our
                     traffic and leads have
                     doubled in just a few months."</p>
-                  <footer class="blockquote-footer float-end mt-3">
+                  <footer class="blockquote-footer bg-transparent float-end">
                     <cite title="Rahul Mehta">Rahul Mehta </cite>
                   </footer>
                 </blockquote>
@@ -382,6 +387,13 @@
       </div>
     </div>
   </div>
+  <!-- whats app icon with contact -->
+  <div class="whatsapp-contact position-fixed bottom-0 end-0 m-4 z-2">
+    <a href="https://wa.me/+919873351442" target="_blank" class="btn fs-4 rounded-circle text-white bg-success"
+      title="+919873351442">
+      <i class="bi bi-whatsapp"></i>
+    </a>
+  </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
     integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -403,7 +415,7 @@
         margin: 10,
         nav: false,
         dots: false,
-        autoplay: true,
+        autoplay: false,
         autoplayTimeout: 5000,
         autoplayHoverPause: true,
         responsive: {
@@ -425,6 +437,14 @@
 
       $('.testimonial-nav .prev-btn').click(function () {
         testimonial.trigger('prev.owl.carousel');
+      });
+
+
+      $('.navbar-toggler').click(function () {
+        $('#navbarNav').addClass('d-block');
+      });
+      $('#close-menu').click(function () {
+        $('#navbarNav').removeClass('d-block');
       });
     });
 
