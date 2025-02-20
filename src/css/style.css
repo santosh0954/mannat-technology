@@ -155,8 +155,9 @@ h6,
     text-align: center;
     z-index: 3;
     align-content: space-around;
-    background-color: rgba(0, 0, 0, 0.75);;
+    background-color: rgba(0, 0, 0, 0.9);;
     display: none;
+    font-size: 1.5rem;
     animation: fade 0.5s ease;
   }
 
@@ -207,7 +208,7 @@ h6,
   animation: slideUp 1s ease 0.5s forwards;
 }
 #hero-slider img {
-  height: 100vh;
+  height: 100svh;
   object-fit: cover;
   animation: grow 15s linear both infinite;
 }
