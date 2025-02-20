@@ -442,9 +442,11 @@
 
       $('.navbar-toggler').click(function () {
         $('#navbarNav').addClass('d-block');
+        $('body').addClass('overflow-hidden');
       });
       $('#close-menu').click(function () {
         $('#navbarNav').removeClass('d-block');
+        $('body').removeClass('overflow-hidden');
       });
     });
 
