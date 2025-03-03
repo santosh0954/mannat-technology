@@ -18,11 +18,12 @@
 
 
 /* Responsive font sizes */
-body {
+body,html {
   font-family: var(--font-body);
   font-size: var(--font-size-base);
   background-color: var(--background);
   color: var(--text);
+  scroll-behavior: smooth;
 }
 /* Scrollbar styles */
 ::-webkit-scrollbar {

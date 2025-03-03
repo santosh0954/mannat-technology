@@ -36,6 +36,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
     integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="css/aos.css">
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/bootstrap-icons.min.css">
   <link rel="stylesheet" href="css/style.css">
@@ -118,10 +119,10 @@
     <section>
       <div class="container py-4">
         <div class="row bg-white shadow-sm p-4 align-items-center">
-          <div class="col-md-6">
+          <div class="col-md-6" data-aos="fade-right">
             <img src="images/about.jpg" alt="About Us" class="img-fluid">
           </div>
-          <div class="col-md-6">
+          <div class="col-md-6" data-aos="fade-left">
             <h1 class="h3">About Us</h1>
             <p class="text-a-justify text-muted">
               Mannat Technology is a dynamic software development and digital solutions company dedicated to helping
@@ -150,12 +151,12 @@
     <!-- services section start  -->
     <section class="bg-light">
       <div class="container py-4 text-center">
-        <div class="mb-5">
+        <div class="mb-4" data-aos="fade-up">
           <h3 class="h5 text-primary ff-body text-uppercase">Our Services</h3>
-          <h2 class="h3">Technology for a Better World</h2>
+          <h2 class="h5">Technology for a Better World</h2>
         </div>
         <div class="row">
-          <div class="col-md-4 mb-3">
+          <div class="col-md-4 mb-3" data-aos="fade-right">
             <div class="card shadow-c border-0">
               <img src="images/web.png" alt="Service 1" class="mx-auto d-block pt-4 mb-2" width="75px">
               <div class="card-body">
@@ -168,7 +169,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4 mb-3">
+          <div class="col-md-4 mb-3" data-aos="fade-up">
             <div class="card shadow-c border-0">
               <img src="images/development.png" alt="Service 1" class="mx-auto d-block pt-4 mb-2" width="75px">
               <div class="card-body">
@@ -181,7 +182,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4 mb-3">
+          <div class="col-md-4 mb-3" data-aos="fade-left">
             <div class="card shadow-c border-0">
               <img src="images/social-media.png" alt="Service 1" class="mx-auto d-block pt-4 mb-2" width="75px">
               <div class="card-body">
@@ -201,26 +202,28 @@
     <!-- services section end  -->
     <!-- tech stack section start  -->
     <section class="tech">
-      <div class="container bg-white py-4 shadow-sm rounded-1 px-4">
+      <div class="container bg-white py-4 shadow-sm rounded-1 px-4" data-aos="fade-up">
         <div class="text-center">
           <h3 class="h5 text-primary ff-body text-uppercase ">Our Tech Stack</h3>
-          <h2 class="h3">Crafting Excellence with the Best Technologies</h2>
+          <h2 class="h5">Crafting Excellence with the Best Technologies</h2>
         </div>
         <hr class="my-4 border-dark-subtle">
         <div class="row">
           <div class="col-md-3">
-            <div class="list-group rounded-1 tech-tabs">
-              <button data-target="#mobile-card" class="list-group-item list-group-item-action active">Mobile
+            <div class="list-group rounded-1 tech-tabs gap-1">
+              <button data-target="#mobile-card" class="list-group-item list-group-item-action active border">Mobile
                 App</button>
-              <button data-target="#front-end-card" class="list-group-item list-group-item-action">Front End</button>
-              <button data-target="#database-card" class="list-group-item list-group-item-action">Database</button>
-              <button data-target="#back-end-card" class="list-group-item list-group-item-action">Back End</button>
-              <button data-target="#open-source-card" class="list-group-item list-group-item-action">Open
+              <button data-target="#front-end-card" class="list-group-item list-group-item-action border">Front
+                End</button>
+              <button data-target="#database-card" class="list-group-item list-group-item-action border">Database</button>
+              <button data-target="#back-end-card" class="list-group-item list-group-item-action border">Back
+                End</button>
+              <button data-target="#open-source-card" class="list-group-item list-group-item-action border">Open
                 Source</button>
-              <button data-target="#devops-cloud-card" class="list-group-item list-group-item-action">Devops/Cloud</button>
+              <button data-target="#devops-cloud-card" class="list-group-item list-group-item-action border">Devops/Cloud</button>
             </div>
           </div>
-          <div class="col-md-9 text-center">
+          <div class="col-md-9 text-center fw-medium text-uppercase small">
             <!-- mobile card  -->
             <div class="border-0 card h-100 p-3 rounded-1 active" id="mobile-card">
               <div class="row row-cols-md-4 row-cols-sm-3 g-2">
@@ -357,9 +360,9 @@
     <!-- client section start  -->
     <section>
       <div class="container py-4 text-center">
-        <div class="mb-5">
+        <div class="mb-5" data-aos="fade-up">
           <h3 class="h5 text-primary ff-body text-uppercase">Our Clients</h3>
-          <h2 class="h3">Working with the best</h2>
+          <h2 class="h5">Working with the best</h2>
         </div>
         <div class="marquee">
           <ul class="d-flex list-unstyled">
@@ -395,9 +398,9 @@
     <!-- testimonial section start  -->
     <section class="container-fluid px-md-5 py-4 bg-theme-secondary">
       <div class="row align-items-center">
-        <div class="col-sm-6 col-md-5 col-lg-4 col-xl-3">
+        <div class="col-sm-6 col-md-5 col-lg-4 col-xl-3" data-aos="fade-up">
           <h3 class="h5 text-primary ff-body text-uppercase">Testimonials</h3>
-          <h2 class="h4">What OurClients Say</h2>
+          <h2 class="h6">What OurClients Say</h2>
           <p class="lead">
             We've got decades-long relationships with customers, See what a Customer says.
           </p>
@@ -488,7 +491,7 @@
           </a>
         </div>
         <div class="col-md-4">
-          <h5 class="fw-medium">Quick Links</h5>
+          <h5 class="fw-medium h6">Quick Links</h5>
           <ul class="list-unstyled footer-links">
             <li><a href="#">Home</a></li>
             <li><a href="#">Services</a></li>
@@ -496,7 +499,7 @@
           </ul>
         </div>
         <div class="col-md-4">
-          <h5 class="fw-medium">Connect With Us</h5>
+          <h5 class="fw-medium h6">Connect With Us</h5>
           <div class="social-icons">
             <a href="#" target="_blank"><i class="bi bi-facebook"></i></a>
             <a href="#" target="_blank"><i class="bi bi-twitter"></i></a>
@@ -507,7 +510,7 @@
       </div>
     </div>
     <hr>
-    <div class="text-center">
+    <div class="text-center text-white-50 small">
       <p class="mb-0">&copy; <span class="year"></span> Mannat Technology. All Rights Reserved.</p>
     </div>
   </footer>
@@ -559,19 +562,25 @@
     integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="js/bootstrap.min.js"></script>
+  <script src="js/aos.js"></script>
   <script src="js/main.js"></script>
   <script>
-                                $('.tech-tabs button').click(function (e) {
+                AOS.init({
+                  offset: 120, // offset (in px) from the original trigger point
+                  delay: 0, // values from 0 to 3000, with step 50ms
+                  duration: 700,
+                });
+                $('.tech-tabs button').click(function (e) {
                   e.preventDefault();
-                                $('.tech-tabs button').removeClass('active');
+                  $('.tech-tabs button').removeClass('active');
                   $(this).addClass('active');
-                                var target = $(this).attr('data-target');
+                  var target = $(this).attr('data-target');
                   $('.card').hide();
                   $(target).show();
                 });
-                                // get width of the brand element then divide children width based on that 
-                                const marqueeWidth = $('.marquee').width()
-                                $('.marquee ul li').width(marqueeWidth / 4);
+                // get width of the brand element then divide children width based on that 
+                const marqueeWidth = $('.marquee').width()
+                $('.marquee ul li').width(marqueeWidth / 4);
   </script>
 </body>
 
