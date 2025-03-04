@@ -66,6 +66,9 @@ body,html {
 .bg-primary-dark {
   background-color: var(--primary-dark) !important;
 }
+.text-accent {
+  color: var(--accent) !important;
+}
 .owl-stage {
   display: flex;
 }
@@ -268,6 +271,8 @@ h6,
   width: fit-content;
   animation: loop 10s linear infinite;
 }
+
+
 @keyframes scrollBg {
   0% {
     background-position: 0% 0%;
@@ -333,4 +338,23 @@ footer {
   border-color: var(--accent);
   color: white;
 
+}
+.page-header {
+  position: relative;
+  overflow: hidden;
+  background-color: black;
+}
+.page-header img {
+  background-size: cover;
+  height: 250px;
+  object-fit: cover;
+  opacity: 0.2;
+  animation: grow 15s linear alternate infinite;
+}
+.page-header h1 {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  /* border-bottom: .25rem solid var(--accent); */
 }
