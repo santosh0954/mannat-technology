@@ -40,7 +40,7 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body data-bs-spy='scroll'>
   <header class="position-absolute top-0 start-0 z-2 w-100">
     <nav class="navbar navbar-expand-lg navbar-dark">
       <div class="container">
@@ -58,13 +58,16 @@
               <a class="nav-link" href="index.html">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
+              <a class="nav-link" href="#about">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Services</a>
+              <a class="nav-link" href="#services">Services</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Portfolio</a>
+              <a class="nav-link" href="#tech">Skills</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#portfolio">Portfolio</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#enquiryForm" data-bs-toggle="modal">Contact</a>
@@ -114,7 +117,7 @@
     </section>
     <!-- slider section end  -->
     <!-- about section start  -->
-    <section>
+    <section id="about">
       <div class="container py-4">
         <div class="row bg-white shadow-sm p-4 align-items-center">
           <div class="col-md-6" data-aos="fade-right">
@@ -147,7 +150,7 @@
     </section>
     <!-- about section end  -->
     <!-- services section start  -->
-    <section class="bg-light">
+    <section class="bg-light" id="services">
       <div class="container py-4 text-center">
         <div class="mb-4" data-aos="fade-up">
           <h3 class="h5 text-primary ff-body text-uppercase">Our Services</h3>
@@ -199,7 +202,7 @@
     </section>
     <!-- services section end  -->
     <!-- tech stack section start  -->
-    <section class="tech">
+    <section id="tech" class="tech">
       <div class="container bg-white py-4 shadow-sm rounded-1 px-4" data-aos="fade-up">
         <div class="text-center">
           <h3 class="h5 text-primary ff-body text-uppercase ">Our Tech Stack</h3>
@@ -519,9 +522,9 @@
   <div class="modal fade" id="enquiryForm" tabindex="-1" aria-labelledby="enquiryFormLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
-        <div class="modal-header bg-dark rounded-top-1 text-white">
-          <h2 class="modal-title fs-5 ff-body fw-light" id="enquiryFormLabel">Enquiry Now</h2>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="modal-header rounded-top-1">
+          <h2 class="ff-body fs-5 modal-title text-accent" id="enquiryFormLabel">Enquiry Now</h2>
+          <button type="button" class="btn-close small" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body px-4">
           <form>
