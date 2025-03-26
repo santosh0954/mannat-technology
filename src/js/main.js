@@ -22,7 +22,7 @@ $(document).ready(function () {
       scrollTrigger: {
         trigger: card,
         start: "top 95%",
-        snap: true,
+        snap: false,
         end: "bottom 70%",
         scrub: true,
         markers: false,

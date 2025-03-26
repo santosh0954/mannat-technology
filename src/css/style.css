@@ -276,7 +276,11 @@ h6,
   width: fit-content;
   animation: loop 10s linear infinite;
 }
-
+@media (max-width: 576px) {
+  .tab-pane img {
+    width: 50px;
+  }
+}
 @keyframes scrollBg {
   0% {
     background-position: 0% 0%;
