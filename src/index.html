@@ -41,6 +41,12 @@
 </head>
 
 <body data-bs-spy='scroll'>
+  <!-- spinner section start  -->
+  <section
+    class=" spinner position-fixed top-0 start-0 w-100 h-100 bg-dark bg-opacity-75 d-flex align-items-center justify-content-center z-3">
+    <div class="spinner-border text-white"></div>
+  </section>
+  <!-- spinner section end -->
   <header class="position-absolute top-0 start-0 z-2 w-100">
     <nav class="navbar navbar-expand-lg navbar-dark">
       <div class="container">
@@ -51,7 +57,8 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="navbar-mobile" id="navbarNav">
-          <button class=" btn-close float-end btn-close-white top-0 end-0 m-3 position-absolute d-lg-none" id="close-menu">
+          <button class=" btn-close float-end btn-close-white top-0 end-0 m-3 position-absolute d-lg-none"
+            id="close-menu">
           </button>
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
@@ -65,9 +72,9 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#tech">Skills</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#portfolio">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#portfolio">Portfolio</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#enquiryForm" data-bs-toggle="modal">Contact</a>
@@ -211,25 +218,38 @@
         <hr class="my-4 border-dark-subtle">
         <div class="row">
           <div class="col-md-3">
-            <div class="list-group rounded-1 tech-tabs gap-1">
-              <button data-target="#mobile-card" class="list-group-item list-group-item-action active border">Mobile
+            <div class="list-group rounded-1 tech-tabs gap-1 overflow-hidden">
+              <button type="button" data-bs-toggle="pill" data-bs-target="#mobile-card"
+                class="list-group-item list-group-item-action active border" role="tab" aria-controls="mobile-card"
+                aria-selected="true">Mobile
                 App</button>
-              <button data-target="#front-end-card" class="list-group-item list-group-item-action border">Front
+              <button type="button" data-bs-toggle="pill" data-bs-target="#front-end-card"
+                class="list-group-item list-group-item-action border" role="tab" aria-controls="front-end-card"
+                aria-selected="false">Front
                 End</button>
-              <button data-target="#database-card" class="list-group-item list-group-item-action border">Database</button>
-              <button data-target="#back-end-card" class="list-group-item list-group-item-action border">Back
+              <button data-bs-toggle="pill" type="button" data-bs-target="#database-card"
+                class="list-group-item list-group-item-action border" role="tab" aria-controls="database-card"
+                aria-selected="false">Database</button>
+              <button data-bs-toggle="pill" type="button" data-bs-target="#back-end-card"
+                class="list-group-item list-group-item-action border" role="tab" aria-controls="back-end-card"
+                aria-selected="false">Back
                 End</button>
-              <button data-target="#open-source-card" class="list-group-item list-group-item-action border">Open
+              <button data-bs-toggle="pill" type="button" data-bs-target="#open-source-card"
+                class="list-group-item list-group-item-action border" role="tab" aria-controls="open-source-card"
+                aria-selected="false">Open
                 Source</button>
-              <button data-target="#devops-cloud-card" class="list-group-item list-group-item-action border">Devops/Cloud</button>
+              <button data-bs-toggle="pill" type="button" data-bs-target="#devops-cloud-card"
+                class="list-group-item list-group-item-action border" role="tab" aria-controls="devops-cloud-card"
+                aria-selected="false">Devops/Cloud</button>
             </div>
           </div>
-          <div class="col-md-9 text-center fw-medium text-uppercase small">
+          <div class="col-md-9 text-center fw-medium text-uppercase small tab-content">
             <!-- mobile card  -->
-            <div class="border-0 card h-100 p-3 rounded-1 active" id="mobile-card">
+            <div class="border-0 tab-pane card h-100 p-3 rounded-1 fade show active" id="mobile-card">
               <div class="row row-cols-md-4 row-cols-sm-3 g-2">
                 <div class="col">
-                  <img src="./images/tech/android.png" alt="Best software company in prayagraj, uttar pradesh" width="70">
+                  <img src="./images/tech/android.png" alt="Best software company in prayagraj, uttar pradesh"
+                    width="70">
                   <p class="text-muted mt-2">Android</p>
                 </div>
                 <div class="col">
@@ -242,13 +262,14 @@
                   <p class="text-muted mt-2">React Native</p>
                 </div>
                 <div class="col">
-                  <img src="./images/tech/flutter.png" alt="Best software company in prayagraj, uttar pradesh" width="70">
+                  <img src="./images/tech/flutter.png" alt="Best software company in prayagraj, uttar pradesh"
+                    width="70">
                   <p class="text-muted mt-2">Flutter</p>
                 </div>
               </div>
             </div>
             <!-- Front end card  -->
-            <div class="border-0 card h-100 p-3 rounded-1" style="display: none;" id="front-end-card">
+            <div class="border-0 tab-pane card h-100 p-3 rounded-1 fade" id="front-end-card">
               <div class="row row-cols-md-4 row-cols-sm-3 g-2">
                 <div class="col">
                   <img src="./images/tech/html.png" alt="Best software company in prayagraj, uttar pradesh" width="70">
@@ -263,7 +284,8 @@
                   <p class="text-muted mt-2">Js</p>
                 </div>
                 <div class="col">
-                  <img src="./images/tech/angular.png" alt="Best software company in prayagraj, uttar pradesh" width="70">
+                  <img src="./images/tech/angular.png" alt="Best software company in prayagraj, uttar pradesh"
+                    width="70">
                   <p class="text-muted mt-2">Angular</p>
                 </div>
                 <div class="col">
@@ -278,10 +300,11 @@
               </div>
             </div>
             <!-- Database  -->
-            <div class="border-0 card h-100 p-3 rounded-1" style="display: none;" id="database-card">
+            <div class="border-0 tab-pane card h-100 p-3 rounded-1 fade" id="database-card">
               <div class="row row-cols-md-4 row-cols-sm-3 g-2">
                 <div class="col">
-                  <img src="./images/tech/mongodb.png" alt="Best software company in prayagraj, uttar pradesh" width="70">
+                  <img src="./images/tech/mongodb.png" alt="Best software company in prayagraj, uttar pradesh"
+                    width="70">
                   <p class="text-muted mt-2">MongoDB</p>
                 </div>
                 <div class="col">
@@ -289,20 +312,23 @@
                   <p class="text-muted mt-2">MySQL</p>
                 </div>
                 <div class="col">
-                  <img src="./images/tech/sqlserver.png" alt="Best software company in prayagraj, uttar pradesh" width="70">
+                  <img src="./images/tech/sqlserver.png" alt="Best software company in prayagraj, uttar pradesh"
+                    width="70">
                   <p class="text-muted mt-2">MS SQL Server</p>
                 </div>
                 <div class="col">
-                  <img src="./images/tech/postgres.png" alt="Best software company in prayagraj, uttar pradesh" width="70">
+                  <img src="./images/tech/postgres.png" alt="Best software company in prayagraj, uttar pradesh"
+                    width="70">
                   <p class="text-muted mt-2">PostgreSQL</p>
                 </div>
               </div>
             </div>
             <!-- Back end  -->
-            <div class="border-0 card h-100 p-3 rounded-1" style="display: none;" id="back-end-card">
+            <div class="border-0 tab-pane card h-100 p-3 rounded-1 fade" id="back-end-card">
               <div class="row row-cols-md-4 row-cols-sm-3 g-2">
                 <div class="col">
-                  <img src="./images/tech/c-sharp.png" alt="Best software company in prayagraj, uttar pradesh" width="70">
+                  <img src="./images/tech/c-sharp.png" alt="Best software company in prayagraj, uttar pradesh"
+                    width="70">
                   <p class="text-muted mt-2">C#</p>
                 </div>
                 <div class="col">
@@ -319,23 +345,25 @@
                   <p class="text-muted mt-2">PHP</p>
                 </div>
                 <div class="col">
-                  <img src="./images/tech/python.png" alt="Best software company in prayagraj, uttar pradesh" width="70">
+                  <img src="./images/tech/python.png" alt="Best software company in prayagraj, uttar pradesh"
+                    width="70">
                   <p class="text-muted mt-2">Python</p>
                 </div>
               </div>
             </div>
             <!-- Open Source  -->
-            <div class="border-0 card h-100 p-3 rounded-1" style="display: none;" id="open-source-card">
+            <div class="border-0 tab-pane card h-100 p-3 rounded-1 fade" id="open-source-card">
               <div class="row row-cols-md-4 row-cols-sm-3 g-2">
                 <div class="col">
-                  <img src="./images/tech/wordpress.png" alt="Best software company in prayagraj, uttar pradesh" width="70">
+                  <img src="./images/tech/wordpress.png" alt="Best software company in prayagraj, uttar pradesh"
+                    width="70">
                   <p class="text-muted mt-2">Wordpress</p>
                 </div>
 
               </div>
             </div>
             <!-- Devops/Cloud  -->
-            <div class="border-0 card h-100 p-3 rounded-1" style="display: none;" id="devops-cloud-card">
+            <div class="border-0 tab-pane card h-100 p-3 rounded-1 fade" id="devops-cloud-card">
               <div class="row row-cols-md-4 row-cols-sm-3 g-2">
                 <div class="col">
                   <img src="./images/tech/aws.png" alt="Best software company in prayagraj, uttar pradesh" width="70">
@@ -346,7 +374,8 @@
                   <p class="text-muted mt-2">Azure</p>
                 </div>
                 <div class="col">
-                  <img src="./images/tech/firestore.png" alt="Best software company in prayagraj, uttar pradesh" width="70">
+                  <img src="./images/tech/firestore.png" alt="Best software company in prayagraj, uttar pradesh"
+                    width="70">
                   <p class="text-muted mt-2">Firestore</p>
                 </div>
 
@@ -358,6 +387,74 @@
       </div>
     </section>
     <!-- tech stack section end  -->
+    <!-- portfolio section start  -->
+    <section class="portfolio-sec py-4 py-md-5" id="portfolio">
+      <div class="container-fluid px-md-5 container-xxl">
+        <div class="text-center mb-5">
+          <h3 class="h5 text-primary ff-body text-uppercase ">Our Best Work</h3>
+          <h2 class="h5">Excellence is our standard</h2>
+        </div>
+        <!-- project section  -->
+        <section id="p-cards">
+          <article class="row p-card bg-white rounded-1 shadow overflow-hidden mb-4 align-items-center">
+            <div class="col-md-6 px-0">
+              <img src="https://placehold.co/600x400" alt="Mannat Technology" class="w-100 d-block">
+            </div>
+            <div class="col-md-6 p-4">
+              <img src="https://placehold.co/300x100" alt="Mannat Technology" width="150" class="mb-3">
+              <p class="text-uppercase fw-medium mt-1 text-accent">Parliament of India</p>
+              <h5>Sansad Cafeteria</h5>
+              <p>
+                For the Parliament of India, we developed a mobile application aimed at enhancing dining experiences for
+                parliamentarians, staff, and visitors. With our easy-to-use app, users can easily place food orders with
+                convenient
+                payment methods, eliminating the need to wait in lengthy lines.
+              </p>
+              <a class="btn btn-outline-primary rounded-pill" href="#">View Project <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </article>
+          <article
+            class="row p-card bg-white rounded-1 shadow overflow-hidden mb-4 align-items-center flex-row-reverse">
+            <div class="col-md-6 px-0">
+              <img src="https://placehold.co/600x400" alt="Mannat Technology" class="w-100 d-block">
+            </div>
+            <div class="col-md-6 p-4">
+              <img src="https://placehold.co/300x100" alt="Mannat Technology" width="150" class="mb-3">
+              <p class="text-uppercase fw-medium mt-1 text-accent">Parliament of India</p>
+              <h5>Sansad Cafeteria</h5>
+              <p>
+                For the Parliament of India, we developed a mobile application aimed at enhancing dining experiences for
+                parliamentarians, staff, and visitors. With our easy-to-use app, users can easily place food orders with
+                convenient
+                payment methods, eliminating the need to wait in lengthy lines.
+              </p>
+              <a class="btn btn-outline-primary rounded-pill" href="#">View Project <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </article>
+          <article class="row p-card bg-white rounded-1 shadow overflow-hidden mb-4 align-items-center">
+            <div class="col-md-6 px-0">
+              <img src="https://placehold.co/600x400" alt="Mannat Technology" class="w-100 d-block">
+            </div>
+            <div class="col-md-6 p-4">
+              <img src="https://placehold.co/300x100" alt="Mannat Technology" width="150" class="mb-3">
+              <p class="text-uppercase fw-medium mt-1 text-accent">Parliament of India</p>
+              <h5>Sansad Cafeteria</h5>
+              <p>
+                For the Parliament of India, we developed a mobile application aimed at enhancing dining experiences for
+                parliamentarians, staff, and visitors. With our easy-to-use app, users can easily place food orders with
+                convenient
+                payment methods, eliminating the need to wait in lengthy lines.
+              </p>
+              <a class="btn btn-outline-primary rounded-pill" href="#">View Project <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </article>
+        </section>
+      </div>
+    </section>
+    <!-- portfolio section end  -->
     <!-- client section start  -->
     <section>
       <div class="container py-4 text-center">
@@ -530,12 +627,13 @@
           <form>
             <div class="mb-3">
               <!-- <label for="name" class="form-label">Name</label> -->
-              <input type="text" class="form-control rounded-1 bg-light" id="name" placeholder="Enter Your Name" required>
+              <input type="text" class="form-control rounded-1 bg-light" id="name" placeholder="Enter Your Name"
+                required>
             </div>
             <div class="mb-3">
               <!-- <label for="exampleInputEmail1" class="form-label">Email</label> -->
-              <input type="email" class="form-control rounded-1 bg-light" id="exampleInputEmail1" aria-describedby="emailHelp"
-                placeholder="Enter Your Email" required>
+              <input type="email" class="form-control rounded-1 bg-light" id="exampleInputEmail1"
+                aria-describedby="emailHelp" placeholder="Enter Your Email" required>
               <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
             </div>
             <div class="mb-3">
@@ -543,8 +641,9 @@
               <textarea required name="message" id="message" rows="5" class="form-control rounded-1 bg-light"
                 placeholder="Message here..."></textarea>
             </div>
-            <button type="submit" class="btn shadow-sm btn-accent w-100 px-4 rounded-pill">Send <i class="bi bi-send"></i></button>
-            </form>
+            <button type="submit" class="btn shadow-sm btn-accent w-100 px-4 rounded-pill">Send <i
+                class="bi bi-send"></i></button>
+          </form>
         </div>
       </div>
     </div>
@@ -563,25 +662,20 @@
     integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
   <script src="js/aos.js"></script>
   <script src="js/main.js"></script>
   <script>
-                AOS.init({
-                  offset: 120, // offset (in px) from the original trigger point
-                  delay: 0, // values from 0 to 3000, with step 50ms
-                  duration: 700,
-                });
-                $('.tech-tabs button').click(function (e) {
-                  e.preventDefault();
-                  $('.tech-tabs button').removeClass('active');
-                  $(this).addClass('active');
-                  var target = $(this).attr('data-target');
-                  $('.card').hide();
-                  $(target).show();
-                });
-                // get width of the brand element then divide children width based on that 
-                const marqueeWidth = $('.marquee').width()
-                $('.marquee ul li').width(marqueeWidth / 4);
+    AOS.init({
+      offset: 120, // offset (in px) from the original trigger point
+      delay: 0, // values from 0 to 3000, with step 50ms
+      duration: 700,
+    });
+    document.addEventListener("DOMContentLoaded", (event) => {
+      // spinner section hide after page load
+      $(".spinner").addClass("d-none");
+    });
   </script>
 </body>
 

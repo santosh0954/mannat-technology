@@ -1,4 +1,35 @@
 $(document).ready(function () {
+  // get width of the brand element then divide children width based on that
+  const marqueeWidth = $(".marquee").width();
+  $(".marquee ul li").width(marqueeWidth / 4);
+
+  // scrolltrigger script for portfolio
+  gsap.registerPlugin(ScrollTrigger);
+  const scroller = document.body;
+  // const scrollTrigger = ScrollTrigger.create({
+  //   scroller: scroller,
+  //   wrapper: ".p-card",
+  // });
+
+  let cards = document.querySelectorAll(".p-card");
+
+  gsap.set(cards, { opacity: 0, scale: 0.8 });
+  cards.forEach((card, index) => {
+    gsap.to(card, {
+      opacity: 1,
+      scale: 1,
+      zIndex: index,
+      scrollTrigger: {
+        trigger: card,
+        start: "top 95%",
+        snap: true,
+        end: "bottom 70%",
+        scrub: true,
+        markers: false,
+      },
+    });
+  });
+
   // Your code here
   $(".year").text(new Date().getFullYear());
 
