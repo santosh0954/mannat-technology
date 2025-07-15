@@ -72,4 +72,58 @@ $(document).ready(function () {
     $("#navbarNav").removeClass("d-block");
     $("body").removeClass("overflow-hidden");
   });
+  // form submission
+  $("#contact-form").submit(function (e) {
+    e.preventDefault();
+    const formData = $(this).serialize();
+    const name = $("#name").val();
+    const phone = $("#phone").val();
+    const pincode = $("#exampleInputEmail1").val();
+    const message = $("#message").val();
+
+    let lat = null;
+    let lon = null;
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        function (position) {
+          lat = position.coords.latitude;
+          lon = position.coords.longitude;
+          console.log("Latitude:", lat, "Longitude:", lon);
+        },
+        function (error) {
+          console.error("Location access denied:", error.message);
+        }
+      );
+    } else {
+      console.log("Geolocation is not supported by this browser.");
+    }
+
+    const xmlData = {
+      name: name,
+      ContactNo: phone,
+      pincode: pincode,
+      message: message,
+      xCord: lat,
+      yCord: lon,
+    };
+    console.log(xmlData);
+    $.ajax({
+      type: "POST",
+      url: "https://leads.mannattechnologies.in/api/Leads",
+      data: formData,
+      dataType: "json",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      success: function () {
+        alert("Thank you for your message!");
+        $("#contact-form")[0].reset();
+      },
+      error: function () {
+        alert(
+          "There was an error sending your message. Please try again later."
+        );
+      },
+    });
+  });
 });
