@@ -625,31 +625,42 @@
           <button type="button" class="btn-close small" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body px-4">
-          <form id="contact-form">
-            <div class="mb-3">
-              <!-- <label for="name" class="form-label">Name</label> -->
+          <form id="contact-form" class="row g-3">
+            <div class="col-12">
+              <label for="name" class="form-label">Name</label>
               <input type="text" class="form-control rounded-1 bg-light" id="name" placeholder="Enter Your Name"
                 required>
             </div>
-            <div class="mb-3">
-              <!-- <label for="exampleInputEmail1" class="form-label">Email</label> -->
-              <input type="email" class="form-control rounded-1 bg-light" id="exampleInputEmail1"
-                aria-describedby="emailHelp" placeholder="Enter Your Email" required>
+            <div class="col-12">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control rounded-1 bg-light" id="email" placeholder="Enter Your Email"
+                required>
               <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
             </div>
-            <div class="mb-3">
-              <!-- <label for="exampleInputEmail1" class="form-label">Email</label> -->
-              <input type="number" class="form-control rounded-1 bg-light" id="exampleInputEmail1"
-                aria-describedby="pinHelp" placeholder="Enter Your Pincode">
-              <div id="pinHelp" class="form-text small">Enter Your Pin to Check Our Services Coverage.</div>
+            <div class="col-6">
+              <label for="phone" class="form-label">Phone</label>
+              <input type="tel" class="form-control rounded-1 bg-light" id="phone" placeholder="Enter Your Mobile no"
+                required>
+              <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
             </div>
-            <div class="mb-3">
+            <div class="col-6">
+              <label for="pincode" class="form-label">Pincode</label>
+              <input type="number" class="form-control rounded-1 bg-light" id="pincode" aria-describedby="pinHelp"
+                placeholder="Enter Your Pincode">
+              <!-- <div id="pinHelp" class="form-text small">Enter Your Pin to Check Our Services Coverage.</div> -->
+            </div>
+            <div class="col-12">
               <!-- <label for="message" class="form-label">Message</label> -->
               <textarea required name="message" id="message" rows="5" class="form-control rounded-1 bg-light"
                 placeholder="Message here (Optional)..."></textarea>
             </div>
-            <button type="submit" class="btn shadow-sm btn-accent w-100 px-4 rounded-pill">Send <i
-                class="bi bi-send"></i></button>
+            <input type="hidden" name="xCord" id="xCord">
+            <input type="hidden" name="yCord" id="yCord">
+            <div class="col-12">
+
+              <button type="submit" class="btn shadow-sm btn-accent w-100 px-4 rounded-pill">Send <i
+                  class="bi bi-send"></i></button>
+            </div>
           </form>
         </div>
       </div>

@@ -72,41 +72,45 @@ $(document).ready(function () {
     $("#navbarNav").removeClass("d-block");
     $("body").removeClass("overflow-hidden");
   });
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(
+      function (position) {
+        $("#xCord").val(position.coords.latitude);
+        $("#yCord").val(position.coords.longitude);
+        console.log(
+          "Latitude:",
+          position.coords.latitude,
+          "Longitude:",
+          position.coords.longitude
+        );
+      },
+      function (error) {
+        console.error("Location access denied:", error.message);
+      }
+    );
+  } else {
+    console.log("Geolocation is not supported by this browser.");
+  }
   // form submission
   $("#contact-form").submit(function (e) {
     e.preventDefault();
-    const formData = $(this).serialize();
     const name = $("#name").val();
     const phone = $("#phone").val();
-    const pincode = $("#exampleInputEmail1").val();
+    const pincode = $("#email").val();
     const message = $("#message").val();
+    const lat = $("#xCord").val();
+    const lon = $("#yCord").val();
 
-    let lat = null;
-    let lon = null;
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(
-        function (position) {
-          lat = position.coords.latitude;
-          lon = position.coords.longitude;
-          console.log("Latitude:", lat, "Longitude:", lon);
-        },
-        function (error) {
-          console.error("Location access denied:", error.message);
-        }
-      );
-    } else {
-      console.log("Geolocation is not supported by this browser.");
-    }
-
-    const xmlData = {
-      name: name,
+    const formData = {
+      Name: name,
       ContactNo: phone,
-      pincode: pincode,
-      message: message,
-      xCord: lat,
-      yCord: lon,
+      Pincode: pincode,
+      Message: message,
+      Latitute: lat,
+      Longitude: lon,
     };
-    console.log(xmlData);
+
+    console.log(formData);
     $.ajax({
       type: "POST",
       url: "https://leads.mannattechnologies.in/api/Leads",
@@ -117,9 +121,11 @@ $(document).ready(function () {
       },
       success: function () {
         alert("Thank you for your message!");
+
         $("#contact-form")[0].reset();
       },
-      error: function () {
+      error: function (err) {
+        console.log(err);
         alert(
           "There was an error sending your message. Please try again later."
         );
